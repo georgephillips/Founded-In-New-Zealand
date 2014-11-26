@@ -1,4 +1,3 @@
-Founded-In-New-Zealand
-======================
+Created by Codrops
 
-The founded in NZ site (A FoundedX site)
+Please read more about our license here: http://tympanus.net/codrops/licensing/ 
