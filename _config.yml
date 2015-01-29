@@ -1,0 +1,4 @@
+collections:
+  startups:
+    name: Kiwi Startups
+    output: false

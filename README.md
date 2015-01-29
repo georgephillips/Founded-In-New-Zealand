@@ -1,3 +1,3 @@
-Created by Codrops
+To compile run `jekyll serve`
 
-Please read more about our license here: http://tympanus.net/codrops/licensing/ 
+To update use [CloudCannon](http://cloudcannon.com)

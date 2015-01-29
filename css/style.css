@@ -1,17 +1,6 @@
 /* General Demo Style */
 @import url(http://fonts.googleapis.com/css?family=Lato:300,700);
 
-@font-face {
-	font-family: 'fontawesome';
-	src:url('../fonts/fontawesome.eot');
-	src:url('../fonts/fontawesome.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/fontawesome.svg#fontawesome') format('svg'),
-		url('../fonts/fontawesome.woff') format('woff'),
-		url('../fonts/fontawesome.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-
 body, html { font-size: 100%; 	padding: 0; margin: 0;}
 
 /* Reset */
@@ -40,6 +29,10 @@ body {
     color: #ffffff;
 	background-color:#222;
 
+}
+
+img {
+	max-width: 100%;
 }
 
 a {
@@ -102,16 +95,29 @@ a.menu-icon {
 }
 
 .container > header {
-	padding: 2.875em 1.875em 3.750em;
+	padding: 0 1.875em 3.750em;
 }
 
-.container > header img {
-	width:70%;
-	margin:3.125em 0;
+.container .header-logo {
+	width:80%;
+	max-width: 40em;
+	margin: 3.125em auto;
+	display: block;
+}
+
+.requirements {
+	margin: 0 0 20px 0;
+	padding: 0;
+	list-style: none;
+}
+
+.requirements li {
+	margin: 10px 0;
+	padding: 0;
 }
 
 @media screen and (max-width: 660px) {
-	.container > header img {
+	.container .header-logo {
 		width:100%;
 	}
 }
@@ -243,6 +249,7 @@ a.menu-icon {
 	-moz-border-radius: 0.188em;
 	border-radius: 0.188em;
 	border:solid 1px #fff;
+	display: inline-block;
 }
 
 .container .join-box a.join-button:hover {
@@ -320,4 +327,104 @@ input.submit:hover {;
         width:95%;
     }
 
+}
+
+.startups {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+	position: relative;
+	width: 90%;
+}
+
+.startups li {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	width: 25%; /* Fallback */
+	width: -webkit-calc(100% / 4);
+	width: calc(100% / 4);
+}
+
+.startups li a,
+.startups li a img {
+	display: block;
+	width: 100%;
+	cursor: pointer;
+	background:none;
+}
+
+.startups li a img {
+	max-width: 100%;
+}
+
+/* Flexbox is used for centering the heading */
+.startups li a div {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	right: 10px;
+	bottom: 10px;
+	-webkit-border-radius: 0.250em;
+	-moz-border-radius: 0.250em;
+	border-radius: 0.250em;
+	background: rgba(28, 94, 214, 0.7);
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-ms-align-items: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: opacity .2s ease-in-out;
+    -moz-transition: opacity .2s ease-in-out;
+    transition: opacity .2s ease-in-out;
+}
+
+.startups li a:hover div {
+	opacity: 1;
+}
+
+.startups li a div h3 {
+	width: 100%;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1em;
+	letter-spacing: 2px;
+	padding: 0 10px;
+}
+
+/* Example for media query: change number of items per row */
+
+@media screen and (max-width: 1190px) {
+	.startups li {
+		width: 20%; /* Fallback */
+		width: -webkit-calc(100% / 4);
+		width: calc(100% / 4);
+	}
+}
+
+@media screen and (max-width: 660px) {
+	.startups li {
+		width: 33.3333333%; /* Fallback */
+		width: -webkit-calc(100% / 3);
+		width: calc(100% / 3);
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.startups li {
+		width: 50%; /* Fallback */
+		width: -webkit-calc(100% / 2);
+		width: calc(100% / 2);
+	}
+}
+
+@media screen and (max-width: 300px) {
+	.startups li {
+		width: 100%;
+	}
 }
