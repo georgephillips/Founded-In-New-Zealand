@@ -10,7 +10,7 @@ layout: default
 	{% assign startups = (site.collections.startups.docs | sort: 'name') %}
 	{% for company in startups %}
 		<li>
-			<a href="{{ company.url | xml_escape }}" target="_blank" title="{{ company.description | xml_escape }}">
+			<a href="{{ company.external_url | xml_escape }}" target="_blank" title="{{ company.description | xml_escape }}">
 				<img src="{{ company.image_path | xml_escape }}" />
 				<div><h3>{{ company.name | xml_escape }}</h3></div>
 			</a>
