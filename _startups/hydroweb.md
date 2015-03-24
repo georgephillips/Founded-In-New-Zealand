@@ -1,6 +1,6 @@
 ---
 name: Hydroweb
-external_url: "http://cloudcannnon.com"
-image_path: /images/logos/cloudcannon.png
+external_url: "http://hydroweb.co.nz"
+image_path: /images/logos/logo.png
 description: ""
 ---
